@@ -1,119 +1,213 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <title>UIS 主升段啟動系統｜Crypto Structure Engine</title>
-
-    <!-- OpenGraph for FB / X preview -->
-    <meta property="og:title" content="UIS 主升段啟動系統｜主力結構掃描 + 多週期 AI 模型">
-    <meta property="og:description" content="用九宮格市場結構、OI/Funding、多因子強弱模型，提前看懂主力下一步。支援 30m→3D 多週期，幫你抓主升段啟動點。">
-    <meta property="og:image" content="https://yourdomain.com/og-preview.jpg">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <style>
-        body {
-            background: #0f0f0f;
-            color: #e5e5e5;
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
-        }
-        header {
-            padding: 80px 15px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 40px;
-            font-weight: 800;
-            background: linear-gradient(90deg, #ffb800, #ffdf70);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        h2 {
-            font-size: 20px;
-            color: #aaa;
-            margin-top: -10px;
-        }
-
-        .cta-btn {
-            margin-top: 30px;
-            padding: 14px 28px;
-            background: #ffb800;
-            color: #000;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        section {
-            padding: 50px 15px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .block-title {
-            font-size: 28px;
-            color: #ffb800;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            text-align: center;
-            color: #777;
-            padding: 40px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>UIS 主升段啟動系統｜Crypto Decision Enhancement System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft JhengHei",sans-serif; background:#05060A; color:#f7f7f7; }
+    .container { max-width:1200px; margin:0 auto; padding:0 16px; }
+    section { padding:64px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+    h1,h2,h3 { margin:0 0 16px; }
+    h1 { font-size:36px; }
+    h2 { font-size:28px; }
+    p { line-height:1.7; margin:0 0 12px; }
+    .hero { padding:80px 0 72px; background:radial-gradient(circle at top,#24253A 0,#05060A 55%); }
+    .flex { display:flex; flex-wrap:wrap; gap:32px; align-items:center; }
+    .flex-2 { flex:1 1 0; min-width:260px; }
+    .btn-primary, .btn-outline {
+      display:inline-block; padding:12px 22px; margin-right:12px; border-radius:999px;
+      font-weight:600; text-decoration:none; font-size:15px;
+    }
+    .btn-primary { background:#F5C84C; color:#05060A; }
+    .btn-outline { border:1px solid #F5C84C; color:#F5C84C; }
+    .tag { display:inline-block; padding:4px 10px; border-radius:999px; font-size:12px; border:1px solid #555; margin-bottom:8px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin-top:24px; }
+    .card {
+      border-radius:16px; padding:18px 18px 20px;
+      background:linear-gradient(135deg,rgba(255,255,255,0.03),rgba(0,0,0,0.5));
+      border:1px solid rgba(255,255,255,0.06);
+    }
+    .card h3 { font-size:18px; margin-bottom:8px; }
+    .muted { color:#c1c1c1; font-size:14px; }
+    .pricing { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; margin-top:24px; }
+    .price-card {
+      border-radius:18px; padding:22px 20px 24px;
+      background:linear-gradient(145deg,rgba(255,255,255,0.02),rgba(0,0,0,0.8));
+      border:1px solid rgba(245,200,76,0.18);
+      position:relative;
+    }
+    .price-tag { font-size:22px; margin:8px 0 12px; }
+    .badge { position:absolute; top:16px; right:16px; font-size:12px; padding:3px 10px; border-radius:999px; background:#F5C84C; color:#05060A; }
+    ul { padding-left:18px; margin:8px 0 0; font-size:14px; }
+    li { margin-bottom:4px; }
+    .faq-item { margin-bottom:16px; }
+    .faq-item h3 { font-size:16px; margin-bottom:4px; }
+    footer { padding:24px 0 40px; text-align:center; font-size:13px; color:#9b9b9b; }
+    @media (max-width:768px){
+      .hero { padding-top:56px; }
+      h1 { font-size:28px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-    <h1>UIS 主升段啟動系統</h1>
-    <h2>九宮格市場結構 × OI/Funding × 多因子強弱模型</h2>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container flex">
+      <div class="flex-2">
+        <div class="tag">Crypto Market Decision Enhancement System</div>
+        <h1>讓你提前看懂主力的下一步。</h1>
+        <p class="muted">
+          UIS 主升段啟動系統：多因子 × 多週期 × 九宮格結構分析。<br/>
+          每天 1 分鐘，讀懂整個加密市場的強弱與主升段啟動機會。
+        </p>
+        <div style="margin-top:18px;">
+          <a href="#trial" class="btn-primary">立即試用（免費版）</a>
+          <a href="#pricing" class="btn-outline">查看方案與價格</a>
+        </div>
+      </div>
+      <div class="flex-2">
+        <!-- 報表示意，可用 image / div 模擬 -->
+        <div class="card">
+          <h3>UIS 每日主升段啟動報表</h3>
+          <p class="muted">示意：多週期強弱分數 × 九宮格 × OI / Funding</p>
+          <pre style="font-size:11px; overflow-x:auto;">
+Symbol    | 1H分數 | 4H分數 | 九宮格     | OI變化 | 訊號
+WIFUSDT   |   88   |   92   | 主升段啟動 | ↑強    | 強烈關注
+ZKUSDT    |   76   |   81   | 迫擊區     | ↑      | 觀察啟動
+BTCUSDT   |   64   |   69   | 壓縮整理   | →      | 結構等待
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <a href="#trial" class="cta-btn">立即試用（免費）</a>
-</header>
+  <!-- Pain Points -->
+  <section>
+    <div class="container">
+      <h2>在加密市場，你失敗不是因為技術差，而是因為…</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>幣太多，看不完</h3>
+          <p class="muted">幣安上百檔合約，根本不可能逐一盯盤，更不用說多週期比對。</p>
+        </div>
+        <div class="card">
+          <h3>假突破、清場段看不懂</h3>
+          <p class="muted">K 線看起來很強，結果一根下殺直接洗掉，根本不知道是崩盤還是洗盤。</p>
+        </div>
+        <div class="card">
+          <h3>OI / Funding 情緒無法量化</h3>
+          <p class="muted">持倉和資金費率看得眼花撩亂，無法轉成「可以行動」的訊號。</p>
+        </div>
+      </div>
+      <p style="margin-top:24px; font-weight:600;">
+        問題不是你不努力，而是你沒有一套能「看穿主力邏輯」的系統。
+      </p>
+    </div>
+  </section>
 
-<section>
-    <div class="block-title">什麼是 UIS？</div>
-    <p>
-        UIS（Uptrend Ignition System）是一套能「讀懂主力行為」的市場結構引擎。
-        透過價 × 量 × 倉 三因子與九宮格分類模型，提前辨識主升段啟動、清場段、假突破等關鍵位置。
-    </p>
-</section>
+  <!-- What is UIS -->
+  <section>
+    <div class="container flex">
+      <div class="flex-2">
+        <h2>UIS 是什麼？</h2>
+        <p>UIS 不是一個指標，而是一套完整的「市場理解系統」。</p>
+        <ul>
+          <li>九宮格市場結構（價 × 量 × 倉）</li>
+          <li>多因子強弱分數（0–100）</li>
+          <li>多週期一致性模型（30m ～ 3D）</li>
+          <li>主升段啟動、清場段、假突破偵測</li>
+        </ul>
+      </div>
+      <div class="flex-2">
+        <div class="card">
+          <h3>九宮格結構示意</h3>
+          <pre style="font-size:11px;">
+[虛胖上漲] [空軍潛伏] [壓縮整理]
+[主力吸籌] [迫擊區  ] [假突破  ]
+[啟動主升] [主升加速] [高檔背離]</pre>
+          <p class="muted">每一格代表不同的主力行為與風險 / 機會區。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section>
-    <div class="block-title">UIS 能做什麼？</div>
-    <ul>
-        <li>找出市場最有爆發力的幣種</li>
-        <li>偵測主升段啟動（7）與主升段加速（8）位置</li>
-        <li>辨識假突破（6）與清場段洗盤</li>
-        <li>整合 30m → 3D 多週期，提供強弱 0–100 分模型</li>
-        <li>每日寄送市場摘要 + Excel 強勢清單</li>
-    </ul>
-</section>
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="container">
+      <h2>選擇最適合你的方案</h2>
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Standard</h3>
+          <div class="price-tag">NT$ 2,980 / 月</div>
+          <p class="muted">適合：一般合約交易者</p>
+          <ul>
+            <li>核心幣種多週期報表</li>
+            <li>基本強弱分數</li>
+            <li>每日 Email 摘要（簡易版）</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <div class="badge">推薦</div>
+          <h3>Pro</h3>
+          <div class="price-tag">NT$ 5,980 / 月</div>
+          <p class="muted">適合：進階交易者 / 半專業操盤</p>
+          <ul>
+            <li>全幣種多週期 Excel 報表</li>
+            <li>九宮格市場結構標記</li>
+            <li>多因子強弱分數（0–100）</li>
+            <li>清場段 / 假突破偵測</li>
+            <li>OI / Funding 整合分析</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Premium</h3>
+          <div class="price-tag">NT$ 25,000+ / 月</div>
+          <p class="muted">適合：自營商 / CTA / 大額資金操盤者</p>
+          <ul>
+            <li>專屬客製化報表</li>
+            <li>每月 1 次一對一策略討論</li>
+            <li>專屬市場結構月報</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="trial">
-    <div class="block-title">免費試用流程</div>
-    <p>
-        1. 填寫 Email<br>
-        2. 立即取得今日試用報表（精簡版）<br>
-        3. 若覺得有價值 → 升級 Pro 方案（完整多週期 Excel）<br>
-    </p>
+  <!-- Trial -->
+  <section id="trial">
+    <div class="container">
+      <h2>開始很簡單</h2>
+      <ol>
+        <li>填寫表單，領取試用版報表</li>
+        <li>用 1 分鐘看懂當天全市場強弱與主升段候選</li>
+        <li>覺得有價值，再選擇適合你的方案</li>
+      </ol>
+      <p style="margin-top:16px;">
+        <a href="#contact" class="btn-primary">申請試用</a>
+      </p>
+    </div>
+  </section>
 
-    <a href="mailto:yourmail@domain.com" class="cta-btn">索取試用報表</a>
-</section>
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <h2>常見問題</h2>
+      <div class="faq-item">
+        <h3>這是交易機器人嗎？會幫我自動下單嗎？</h3>
+        <p class="muted">不是。UIS 不會幫你自動下單，而是幫你提供「高品質決策訊號」，最後的下單與風控依然由你掌握。</p>
+      </div>
+      <div class="faq-item">
+        <h3>我不太懂 OI / Funding，看得懂報表嗎？</h3>
+        <p class="muted">可以。UIS 已將 OI / Funding 整合成「分數與等級」，你只需要解讀結果，不需要手動讀原始數據。</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-    UIS Crypto Engine © 2025 All Rights Reserved.
-</footer>
+  <footer>
+    UIS 主升段啟動系統 · Crypto Decision Enhancement System
+  </footer>
 
 </body>
 </html>
